@@ -1,0 +1,26 @@
+{
+    "name": "hlasm-language-support",
+    "displayName": "hlasm_language_support",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "hello",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hlasm",
+            "aliases": ["hlasm", "hlasm"],
+            "extensions": ["hla"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hlasm",
+            "scopeName": "source.hla",
+            "path": "./syntaxes/hlasm.tmLanguage.json"
+        }]
+    }
+}

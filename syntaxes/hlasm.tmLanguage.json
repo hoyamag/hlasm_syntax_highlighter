@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "hlasm",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.hlasm",
+					"match": "\\b(IF|SWITCH|WHILE|FOR|RETURN|THEN|ELSE|END)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hlasm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hlasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.asterisk",
+					"match": "^\\*.*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.hla"
+}
